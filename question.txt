@@ -183,5 +183,13 @@ What is the difference between Expanded and Flexible widgets?
 58. What is InheritedWidget?
 *******************************************************************************************************************************************
 59. How are you manage web, android and ios ui?
-
-
+*******************************************************************************************************************************************
+60. What’s the lifecycle of a ‘StatefulWidget’?
+createState() — a method in a StatefulWidget that’s called immediately and should return a State object for the widget
+initState() — the first method called in the State object after the widget is created
+didChangeDependencies() — called immediately after initState() the first time the widget is built
+build() — very similar to the one from the StatelessWidget. It’s called right after didChangeDependencies(). It’s called every single time the UI needs to render and returns a widget’s tree.
+didUpdateWidget() — it’s called when the parent widget changes and needs to redraw its UI
+deactivate() — called before dispose(), when this object is removed from the tree
+dispose() — called when deallocating the whole widget and its state
+*******************************************************************************************************************************************
