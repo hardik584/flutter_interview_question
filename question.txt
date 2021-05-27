@@ -43,6 +43,7 @@ compareTo():It compare objects to a different objects.
 5. Explain async, async*, yeild, yeild* and await
 *******************************************************************************************************************************************
 6. Explain BlocProvider, BlocConsumer, BlocListerner
+Exlain Bloc pattern in brief
 First of all, BlocBuilder/BlocListener should be in the scope of a corresponding BlocProvider.
 
 You should return BlocBuilder in the build method of your Stateless/Stateful widget. If you want to combine BlocListener and 
@@ -157,10 +158,20 @@ Integration Tests: It validates a complete app or a large part of the app. Its g
 ??= , ??
 *******************************************************************************************************************************************
 47. How can we make ui responsive? 
+What is the difference between Expanded and Flexible widgets?
 *******************************************************************************************************************************************
 48. What is extension ? 
 *******************************************************************************************************************************************
 49. Any 5 apple policy which you have face while submission of app store
 *******************************************************************************************************************************************
-50. 
+50. When should you use WidgetsBindingObserver? 
+*******************************************************************************************************************************************
+51 .How is Flutter different from a WebView based application? like crossplatform and hybrid app development
+*******************************************************************************************************************************************
+52. What is Fat Arrow Notation in Dart and when do you use it?
+*******************************************************************************************************************************************
+53. What is method channel and when we can use it?
+*******************************************************************************************************************************************
+*******************************************************************************************************************************************
+*******************************************************************************************************************************************
 
