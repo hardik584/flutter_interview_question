@@ -1,0 +1,91 @@
+1. Why does the primary Flutter app build take so long?
+
+Answer : During the primary time flutter app development, a device-specific APK or IPA file is made . 
+
+Consequently, XCode and Gradle are utilized in building the files, thus, taking time. Thereafter, when the app is restarted, 
+
+flutter patches the changes on the prevailing app, leading to , a super-fast refresh.
+*******************************************************************************************************************************************
+2. What are the similarities and differences of Future and Stream?
+
+Answer : Similarity:
+
+Future and Stream both work asynchronously.
+
+Both have some potential value.
+
+Differences:
+
+A Stream may be a combination of Futures.
+
+Future has just one response but Stream could have any number of Response.
+*******************************************************************************************************************************************
+3. How is whenCompleted() different from then() in Future? 
+
+Answer: whenComplete will fire a function either when the longer term completes with a mistake or not, while .then returns a replacement Future which is 
+ completed with the results of the decision to onValue (if this future completes with a value) or to onError (if this future completes with an error)
+
+.whenCompleted is that the asynchronous equivalent of a "finally" block.
+*******************************************************************************************************************************************
+4. What Are the varied Methods to control Strings?
+Answer: There are various methods to control string that are given in table:
+
+String Methods Description
+
+toLowerCase():It converts all the string character into small letter .
+
+toUpperCase():It converts all the string character into capital .
+
+trim():It returns the string with none leading and trailing whitespace.
+
+compareTo():It compare objects to a different objects.
+*******************************************************************************************************************************************
+5. Explain async, async*, yeild, yeild* and await
+*******************************************************************************************************************************************
+6. Explain BlocProvider, BlocConsumer, BlocListerner
+First of all, BlocBuilder/BlocListener should be in the scope of a corresponding BlocProvider.
+
+You should return BlocBuilder in the build method of your Stateless/Stateful widget. If you want to combine BlocListener and 
+BlocBuilder you can use BlocConsumer widget. In addition, you can add parameter 
+buildWhen to specify if BlocBuilder should rebuild your widget depending on incoming state. 
+Here's an example:
+class __ScreenWidgetState extends State<Screen> {
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocConsumer<ScreenBloc, ScreenState>(
+      buildWhen: (previousState, state) {
+        return state is! DontBuild;
+      },
+      builder: (BuildContext context, state) {
+        return Text(state.text);
+      },
+      listener: (BuildContext context, state) {
+        if (state is ShowFlushbar) {
+          showFlushBar(context: context, message: state.text);
+        }
+      },
+    );
+  }
+}
+*******************************************************************************************************************************************
+*******************************************************************************************************************************************
+*******************************************************************************************************************************************
+*******************************************************************************************************************************************
+*******************************************************************************************************************************************
+*******************************************************************************************************************************************
+*******************************************************************************************************************************************
+*******************************************************************************************************************************************
+*******************************************************************************************************************************************
+*******************************************************************************************************************************************
+*******************************************************************************************************************************************
+*******************************************************************************************************************************************
+*******************************************************************************************************************************************
+*******************************************************************************************************************************************
+*******************************************************************************************************************************************
+*******************************************************************************************************************************************
+*******************************************************************************************************************************************
+*******************************************************************************************************************************************
+*******************************************************************************************************************************************
+*******************************************************************************************************************************************
+*******************************************************************************************************************************************
